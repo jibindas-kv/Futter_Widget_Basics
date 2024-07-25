@@ -1,11 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:jibin_flutter/UI%20With%20Image/page_1.dart';
 import 'package:jibin_flutter/Widgets_container.dart';
 import 'package:jibin_flutter/Task_1_squares.dart';
 import 'package:jibin_flutter/row_widget.dart';
 import 'package:jibin_flutter/task_2.dart';
 import 'package:jibin_flutter/task_3.dart';
+import 'package:jibin_flutter/1st%20Login%20Page/Login_page.dart';
 
 import 'Icon_widget.dart';
+import '1st Login Page/Login_page_2.dart';
+import '1st Login Page/Login_page_2.dart';
+import 'UI With Image/page_2.dart';
 import 'row_and_column_widget.dart';
 import 'TextButton_widget.dart';
 import 'Text_widget.dart';
@@ -42,7 +47,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: Second_ui(),
+      home: Page_2(),
     );
   }
 }
