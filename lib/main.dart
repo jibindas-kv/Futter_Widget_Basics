@@ -1,19 +1,27 @@
 import 'package:flutter/material.dart';
+import 'package:jibin_flutter/Navigation%20Task/nav_1.dart';
+import 'package:jibin_flutter/Navigation%20Task/nav_2.dart';
 import 'package:jibin_flutter/UI%20With%20Image/page_1.dart';
-import 'package:jibin_flutter/Widgets_container.dart';
 import 'package:jibin_flutter/Task_1_squares.dart';
-import 'package:jibin_flutter/row_widget.dart';
+
 import 'package:jibin_flutter/task_2.dart';
 import 'package:jibin_flutter/task_3.dart';
 import 'package:jibin_flutter/1st%20Login%20Page/Login_page.dart';
 
-import 'Icon_widget.dart';
+import '3 Ui Page With Images/page1.dart';
+import '3 Ui Page With Images/page2.dart';
+import '3 Ui Page With Images/page3.dart';
 import '1st Login Page/Login_page_2.dart';
 import '1st Login Page/Login_page_2.dart';
+import 'Navigation Task/nav_3.dart';
+import 'Navigation/first_page.dart';
+import 'Navigation/second_page.dart';
+import 'Navigation/third_page.dart';
+import 'Textfield_Task.dart';
+import 'Widgets/Image_widget.dart';
 import 'UI With Image/page_2.dart';
-import 'row_and_column_widget.dart';
-import 'TextButton_widget.dart';
-import 'Text_widget.dart';
+import 'Widgets/Text_widget.dart';
+import 'Widgets/TextField_Widget.dart';
 
 void main() {
   runApp(const MyApp());
@@ -47,7 +55,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: Page_2(),
+      home: nav_1(),
     );
   }
 }

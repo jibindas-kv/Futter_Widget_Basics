@@ -13,16 +13,25 @@ class _page_1State extends State<page_1> {
     return Scaffold(
       body: Column(
         children: [
-          Container(
-            height: 400,
-            width: 500,
-            color: Colors.white,
+          SizedBox(height: 60,),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Container(
+                height: 350,
+                width: 300,
+                decoration: BoxDecoration(
+                    color: Colors.white,
+                    image: DecorationImage(
+                        image: AssetImage("assets/login page Image.jpg"),fit: BoxFit.fill)),
+              )
+            ],
           ),
           SizedBox(height: 30,),
           Center(
             child: Text(
               "Hello!",
-              style: TextStyle(fontSize: 45, fontWeight: FontWeight.w900),
+              style: TextStyle(fontSize: 45, fontWeight: FontWeight.w900,fontStyle: FontStyle.italic),
             ),
           ),
           SizedBox(height: 20,),
@@ -80,9 +89,11 @@ class _page_1State extends State<page_1> {
               ),
               ]),
           SizedBox(height: 30,),
-          Text(
-            "Or Via Social Media",
-            style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500),
+          Center(
+            child: Text(
+              "Or Via Social Media",
+              style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500),
+            ),
           ),
           SizedBox(height: 40,),
           Row(
@@ -93,7 +104,11 @@ class _page_1State extends State<page_1> {
                 width: 50,
                 decoration: BoxDecoration(
                     color: Colors.blue,
-                    borderRadius: BorderRadius.circular(100)),
+                    image: DecorationImage(
+                        image: AssetImage("assets/facebook.png"),fit: BoxFit.fill),
+                    borderRadius: BorderRadius.circular(100)
+                ),
+
               ),
               SizedBox(width: 20,),
               Container(
@@ -101,6 +116,8 @@ class _page_1State extends State<page_1> {
                 width: 50,
                 decoration: BoxDecoration(
                     color: Colors.pink,
+                    image: DecorationImage(
+                        image: AssetImage("assets/google+.png"),fit: BoxFit.fill),
                     borderRadius: BorderRadius.circular(100)),
               ),
               SizedBox(width: 20,),
@@ -109,6 +126,8 @@ class _page_1State extends State<page_1> {
                 width: 50,
                 decoration: BoxDecoration(
                     color: Colors.blue,
+                    image: DecorationImage(
+                        image: AssetImage("assets/linkedin.png"),fit: BoxFit.fill),
                     borderRadius: BorderRadius.circular(100)),
               ),
               SizedBox(width: 20,),

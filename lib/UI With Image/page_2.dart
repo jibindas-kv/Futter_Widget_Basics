@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class Page_2 extends StatefulWidget {
-  const Page_2({super.key});
+class page_2 extends StatefulWidget {
+  const page_2({super.key});
 
   @override
-  State<Page_2> createState() => _Page_2State();
+  State<page_2> createState() => _page_2State();
 }
 
-class _Page_2State extends State<Page_2> {
+class _page_2State extends State<page_2> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -90,7 +90,11 @@ class _Page_2State extends State<Page_2> {
                 width: 50,
                 decoration: BoxDecoration(
                     color: Colors.blue,
-                    borderRadius: BorderRadius.circular(100)),
+                    image: DecorationImage(
+                        image: AssetImage("assets/facebook.png"),fit: BoxFit.fill),
+                    borderRadius: BorderRadius.circular(100)
+                ),
+
               ),
               SizedBox(width: 20,),
               Container(
@@ -98,6 +102,8 @@ class _Page_2State extends State<Page_2> {
                 width: 50,
                 decoration: BoxDecoration(
                     color: Colors.pink,
+                    image: DecorationImage(
+                        image: AssetImage("assets/google+.png"),fit: BoxFit.fill),
                     borderRadius: BorderRadius.circular(100)),
               ),
               SizedBox(width: 20,),
@@ -106,8 +112,11 @@ class _Page_2State extends State<Page_2> {
                 width: 50,
                 decoration: BoxDecoration(
                     color: Colors.blue,
+                    image: DecorationImage(
+                        image: AssetImage("assets/linkedin.png"),fit: BoxFit.fill),
                     borderRadius: BorderRadius.circular(100)),
               ),
+              SizedBox(width: 20,),
             ],
           ),
           SizedBox(height: 30,),
