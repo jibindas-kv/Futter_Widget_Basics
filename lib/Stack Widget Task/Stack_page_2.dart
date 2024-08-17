@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:jibin_flutter/Stack%20Widget%20Task/Stack_page_1.dart';
 
 class Stack_page_2 extends StatefulWidget {
   const Stack_page_2({super.key});
@@ -26,17 +27,24 @@ class _Stack_page_2State extends State<Stack_page_2> {
               ),
               Padding(
                 padding: const EdgeInsets.only(left: 28, top: 60),
-                child: Container(
-                  height: 60,
-                  width: 50,
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(20),
-                      color: Colors.black),
-                  child: Center(
-                      child: Icon(
-                    Icons.arrow_back_ios,
-                    color: Colors.white,
-                  )),
+                child: InkWell(
+                  onTap: () {
+                    Navigator.push(context, MaterialPageRoute(builder: (context) {
+                      return Stack_page_1();
+                    },));
+                  },
+                  child: Container(
+                    height: 60,
+                    width: 50,
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(20),
+                        color: Colors.black),
+                    child: Center(
+                        child: Icon(
+                      Icons.arrow_back_ios,
+                      color: Colors.white,
+                    )),
+                  ),
                 ),
               ),
               Padding(
@@ -289,24 +297,26 @@ class _Stack_page_2State extends State<Stack_page_2> {
                       Padding(
                         padding: const EdgeInsets.only(top: 10),
                         child: Container(
-                          height: 30,
-                          width: 60,
-                          decoration: BoxDecoration(
-                              color: Colors.black,
-                              borderRadius: BorderRadius.circular(10)),
-                          child: Container(
-
+                            height: 30,
+                            width: 60,
                             decoration: BoxDecoration(
-                              image: DecorationImage(image: AssetImage("assets/master_card.png"))
-                            ),
-                          )
-                        ),
+                                color: Colors.black,
+                                borderRadius: BorderRadius.circular(10)),
+                            child: Container(
+                              decoration: BoxDecoration(
+                                  image: DecorationImage(
+                                      image: AssetImage(
+                                          "assets/master_card.png"))),
+                            )),
                       ),
                       Padding(
                         padding: const EdgeInsets.only(top: 14),
                         child: Text(
                           "Master Card",
-                          style: TextStyle(color: Colors.grey.shade400, fontSize: 12,fontWeight: FontWeight.bold),
+                          style: TextStyle(
+                              color: Colors.grey.shade400,
+                              fontSize: 12,
+                              fontWeight: FontWeight.bold),
                         ),
                       ),
                       Padding(
@@ -315,8 +325,10 @@ class _Stack_page_2State extends State<Stack_page_2> {
                           padding: const EdgeInsets.only(bottom: 13),
                           child: Text(
                             "Pay",
-                            style:
-                            TextStyle(color: Colors.white, fontSize: 32,fontWeight: FontWeight.bold),
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 32,
+                                fontWeight: FontWeight.bold),
                           ),
                         ),
                       ),
@@ -325,18 +337,20 @@ class _Stack_page_2State extends State<Stack_page_2> {
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.only(top: 730,left: 20),
+                padding: const EdgeInsets.only(top: 730, left: 20),
                 child: Padding(
                   padding: const EdgeInsets.only(bottom: 13),
                   child: Text(
                     "Total Order",
-                    style:
-                    TextStyle(color: Colors.white, fontSize: 25,fontWeight: FontWeight.bold),
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 25,
+                        fontWeight: FontWeight.bold),
                   ),
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.only(top:780,left: 30),
+                padding: const EdgeInsets.only(top: 780, left: 30),
                 child: Row(
                   children: [
                     Container(
@@ -345,28 +359,71 @@ class _Stack_page_2State extends State<Stack_page_2> {
                       color: Colors.black,
                       child: Stack(
                         children: [
-                          Icon(CupertinoIcons.cart,color: Colors.white,),
+                          Icon(
+                            CupertinoIcons.cart,
+                            color: Colors.white,
+                          ),
                           Padding(
                             padding: const EdgeInsets.only(left: 30),
                             child: Container(
                               height: 15,
-                                width: 15,
-                                color: Colors.black,
-                              child: Text("3",style: TextStyle(color: Colors.white,fontSize: 15),),
+                              width: 15,
+                              color: Colors.black,
+                              child: Text(
+                                "3",
+                                style: TextStyle(
+                                    color: Colors.white, fontSize: 15),
+                              ),
                             ),
                           ),
                           Padding(
                             padding: const EdgeInsets.only(top: 25),
-                            child: Text("Total Drinks",style: TextStyle(color: Colors.white,fontSize: 10),),
+                            child: Text(
+                              "Total Drinks",
+                              style:
+                                  TextStyle(color: Colors.grey.shade400,fontSize: 10,fontWeight: FontWeight.bold),
+                            ),
                           ),
                         ],
                       ),
                     )
                   ],
                 ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(top: 770, left: 105),
+                child: Container(
+                  height: 70,
+                  width: 80,
+                  decoration: BoxDecoration(color: Colors.black),
+                  child: Row(
+                    children: [
+                      Stack(children: [
+                        Icon(
+                          CupertinoIcons.money_dollar,
+                          color: Colors.white,
+                          size: 35,
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.only(left: 26,bottom: 30),
+                          child: Text(
+                            "32",
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 30,
+                                fontWeight: FontWeight.bold),
+                          ),
+                        ),
+
+                        Padding(
+                          padding: const EdgeInsets.only(top: 35,left: 6),
+                          child: Text("Total Drinks",style: TextStyle(color: Colors.grey.shade400,fontSize: 10,fontWeight: FontWeight.bold),),
+                        ),
+                      ]),
+                    ],
+                  ),
+                ),
               )
-
-
             ],
           )
         ],
