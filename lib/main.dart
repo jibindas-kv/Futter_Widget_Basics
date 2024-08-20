@@ -1,4 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:jibin_flutter/Car%20Rent%20Ui/Car_rent_bottom_navigation_bar.dart';
+import 'package:jibin_flutter/Car%20Rent%20Ui/Get_Started.dart';
+import 'package:jibin_flutter/Car%20Rent%20Ui/Home.dart';
+import 'package:jibin_flutter/Car%20Rent%20Ui/Inbox.dart';
+import 'package:jibin_flutter/Car%20Rent%20Ui/Profile.dart';
+import 'package:jibin_flutter/Car%20Rent%20Ui/Wishlist.dart';
 import 'package:jibin_flutter/Coffe%20Shop/CS_1.dart';
 import 'package:jibin_flutter/Coffe%20Shop/CS_2.dart';
 import 'package:jibin_flutter/Coffe%20Shop/CS_3.dart';
@@ -70,7 +76,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: Radio_Button_Task(),
+      home: Get_Started(),
     );
   }
 }

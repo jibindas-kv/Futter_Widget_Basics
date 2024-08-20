@@ -38,9 +38,13 @@ class _Radio_Button_TaskState extends State<Radio_Button_Task> {
                     width: 200,
                     padding: const EdgeInsets.all(8.0),
                     decoration: BoxDecoration(
-                        color: Colors.white,
+                        color: _delivery == "Standard"
+                            ? Colors.blue.shade100
+                            : Colors.white,
                         borderRadius: BorderRadius.circular(5),
-                        border: Border.all(color: Colors.black)),
+                        border: Border.all(color: _delivery == "Standard"
+                            ? Colors.blue
+                            : Colors.black)),
                     child: Column(
                       children: [
                         Row(
@@ -54,6 +58,7 @@ class _Radio_Button_TaskState extends State<Radio_Button_Task> {
                               width: 50,
                             ),
                             Radio<String>(
+                              activeColor: Colors.blue,
                               value: 'Standard',
                               groupValue: _delivery,
                               onChanged: (String? value) {
@@ -89,9 +94,13 @@ class _Radio_Button_TaskState extends State<Radio_Button_Task> {
                     width: 200,
                     padding: const EdgeInsets.all(8.0),
                     decoration: BoxDecoration(
-                        color: Colors.white,
+                        color: _delivery == "Express"
+                            ? Colors.blue.shade100
+                            : Colors.white,
                         borderRadius: BorderRadius.circular(5),
-                        border: Border.all(color: Colors.black)),
+                        border: Border.all(color: _delivery == "Express"
+                            ? Colors.blue
+                            : Colors.black)),
                     child: Column(
                       children: [
                         Row(
@@ -105,6 +114,7 @@ class _Radio_Button_TaskState extends State<Radio_Button_Task> {
                               width: 50,
                             ),
                             Radio<String>(
+                              activeColor: Colors.blue,
                               value: 'Express',
                               groupValue: _delivery,
                               onChanged: (String? value) {
@@ -140,9 +150,11 @@ class _Radio_Button_TaskState extends State<Radio_Button_Task> {
                     width: 220,
                     padding: const EdgeInsets.all(8.0),
                     decoration: BoxDecoration(
-                        color: Colors.white,
+                      color: _delivery == "Super Test"
+                          ? Colors.blue.shade100
+                          : Colors.white,
                         borderRadius: BorderRadius.circular(5),
-                        border: Border.all(color: Colors.black)),
+                        border: Border.all(color: Colors.black),),
                     child: Column(
                       children: [
                         Row(
@@ -156,6 +168,7 @@ class _Radio_Button_TaskState extends State<Radio_Button_Task> {
                               width: 50,
                             ),
                             Radio<String>(
+                              activeColor: Colors.blue,
                               value: 'Super Test',
                               groupValue: _delivery,
                               onChanged: (String? value) {
@@ -220,9 +233,13 @@ class _Radio_Button_TaskState extends State<Radio_Button_Task> {
                     width: 300,
                     padding: const EdgeInsets.all(8.0),
                     decoration: BoxDecoration(
-                        color: Colors.white,
+                        color: _payment == "card"
+                            ? Colors.blue.shade100
+                            : Colors.white,
                         borderRadius: BorderRadius.circular(5),
-                        border: Border.all(color: Colors.black)),
+                        border: Border.all(color: _payment == "card"
+                            ? Colors.blue
+                            : Colors.black)),
                     child: Column(
                       children: [
                         Row(
@@ -236,6 +253,7 @@ class _Radio_Button_TaskState extends State<Radio_Button_Task> {
                               width: 50,
                             ),
                             Radio<String>(
+                              activeColor: Colors.blue,
                               value: 'card',
                               groupValue: _payment,
                               onChanged: (String? value) {
@@ -259,9 +277,13 @@ class _Radio_Button_TaskState extends State<Radio_Button_Task> {
                     width: 300,
                     padding: const EdgeInsets.all(8.0),
                     decoration: BoxDecoration(
-                        color: Colors.white,
+                        color: _payment == "upi"
+                            ? Colors.blue.shade100
+                            : Colors.white,
                         borderRadius: BorderRadius.circular(5),
-                        border: Border.all(color: Colors.black)),
+                        border: Border.all(color: _payment == "upi"
+                            ? Colors.blue
+                            : Colors.black)),
                     child: Column(
                       children: [
                         Row(
@@ -275,6 +297,7 @@ class _Radio_Button_TaskState extends State<Radio_Button_Task> {
                               width: 50,
                             ),
                             Radio<String>(
+                              activeColor: Colors.blue,
                               value: 'upi',
                               groupValue: _payment,
                               onChanged: (String? value) {
