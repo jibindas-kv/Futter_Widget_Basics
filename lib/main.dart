@@ -8,20 +8,28 @@ import 'package:jibin_flutter/Car%20Rent%20Ui/Wishlist.dart';
 import 'package:jibin_flutter/Coffe%20Shop/CS_1.dart';
 import 'package:jibin_flutter/Coffe%20Shop/CS_2.dart';
 import 'package:jibin_flutter/Coffe%20Shop/CS_3.dart';
+import 'package:jibin_flutter/Fruit%20Buy%20Ui/Banana.dart';
+import 'package:jibin_flutter/Fruit%20Buy%20Ui/Drinks.dart';
+import 'package:jibin_flutter/Fruit%20Buy%20Ui/Fruit_home.dart';
+import 'package:jibin_flutter/Fruit%20Buy%20Ui/Fruit_navigation.dart';
 import 'package:jibin_flutter/Navigation%20Task/nav_1.dart';
 import 'package:jibin_flutter/Navigation%20Task/nav_2.dart';
+import 'package:jibin_flutter/Pickers/Date_picker.dart';
+import 'package:jibin_flutter/Pickers/Image_picker.dart';
 import 'package:jibin_flutter/Stack%20Widget%20Task/Stack_page_1.dart';
 import 'package:jibin_flutter/Stack%20Widget%20Task/Stack_page_2.dart';
 import 'package:jibin_flutter/Tasks/Radio_Button_Task.dart';
 import 'package:jibin_flutter/UI%20With%20Image/page_1.dart';
 import 'package:jibin_flutter/Tasks/Whatsapp.dart';
 import 'package:jibin_flutter/Widgets/Card_Widget.dart';
+import 'package:jibin_flutter/Widgets/Check_box_widget.dart';
 import 'package:jibin_flutter/Widgets/List_view_builder_widget.dart';
 import 'package:jibin_flutter/Widgets/List_view_separter_widget.dart';
 import 'package:jibin_flutter/Tasks/task_3.dart';
 import 'package:jibin_flutter/1st%20Login%20Page/Login_page.dart';
 import 'package:jibin_flutter/Widgets/Radio_Button_Eg.dart';
 import 'package:jibin_flutter/Widgets/Stack_Widget.dart';
+import 'package:jibin_flutter/Widgets/Tab_bar_widget.dart';
 import '3 Ui Page With Images/page1.dart';
 import '3 Ui Page With Images/page2.dart';
 import '3 Ui Page With Images/page3.dart';
@@ -76,7 +84,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: Get_Started(),
+      home: Fruit_navigation(),
     );
   }
 }
