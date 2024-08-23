@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:jibin_flutter/Vehicle%20Repair/Admin/Vehicle_Navigation.dart';
 
 class User_page extends StatefulWidget {
   const User_page({super.key});
@@ -33,7 +34,13 @@ class _User_pageState extends State<User_page> {
                         Container(
                             height: 30,
                             width: 30,
-                            child: Icon(Icons.arrow_back_ios_sharp)),
+                            child: InkWell(
+                                onTap: () {
+                                  Navigator.push(context, MaterialPageRoute(builder: (context) {
+                                    return Vehicle_Navigation();
+                                  },));
+                                },
+                                child: Icon(Icons.arrow_back_ios_sharp))),
                       ],
                     ),
                     Column(
