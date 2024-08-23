@@ -1,9 +1,5 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:jibin_flutter/Car%20Rent%20Ui/Home.dart';
-import 'package:jibin_flutter/Car%20Rent%20Ui/Inbox.dart';
-import 'package:jibin_flutter/Car%20Rent%20Ui/Profile.dart';
-import 'package:jibin_flutter/Car%20Rent%20Ui/Wishlist.dart';
 import 'package:jibin_flutter/Fruit%20Buy%20Ui/Fruit_home.dart';
 
 
