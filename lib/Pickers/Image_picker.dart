@@ -33,7 +33,7 @@ class _ImagePickerExampleState extends State<ImagePickerExample> {
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
+          children: [
             Container(
               width: 200,
               height: 200,

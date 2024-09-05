@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:jibin_flutter/Biodata/Biodata_field.dart';
 import 'package:jibin_flutter/Car%20Rent%20Ui/Car_rent_bottom_navigation_bar.dart';
 import 'package:jibin_flutter/Car%20Rent%20Ui/Get_Started.dart';
 import 'package:jibin_flutter/Car%20Rent%20Ui/Home.dart';
@@ -16,6 +18,8 @@ import 'package:jibin_flutter/Navigation%20Task/nav_1.dart';
 import 'package:jibin_flutter/Navigation%20Task/nav_2.dart';
 import 'package:jibin_flutter/Pickers/Date_picker.dart';
 import 'package:jibin_flutter/Pickers/Image_picker.dart';
+import 'package:jibin_flutter/Shared%20Preference/1st%20Page.dart';
+import 'package:jibin_flutter/Shared%20Preference/2nd%20Page.dart';
 import 'package:jibin_flutter/Stack%20Widget%20Task/Stack_page_1.dart';
 import 'package:jibin_flutter/Stack%20Widget%20Task/Stack_page_2.dart';
 import 'package:jibin_flutter/Tasks/Radio_Button_Task.dart';
@@ -30,6 +34,7 @@ import 'package:jibin_flutter/Vehicle%20Repair/Admin/User_And_Mechanic.dart';
 import 'package:jibin_flutter/Vehicle%20Repair/Admin/Vehicle_Navigation.dart';
 import 'package:jibin_flutter/Vehicle%20Repair/Admin/Vehicle_login.dart';
 import 'package:jibin_flutter/Widgets/Alert_dialog_box_widget.dart';
+import 'package:jibin_flutter/Widgets/Animation%20Widgets/Lottie_animation.dart';
 import 'package:jibin_flutter/Widgets/Card_Widget.dart';
 import 'package:jibin_flutter/Widgets/Check_box_widget.dart';
 import 'package:jibin_flutter/Widgets/Drawer_widget.dart';
@@ -42,6 +47,7 @@ import 'package:jibin_flutter/Widgets/Snackbar_widget.dart';
 import 'package:jibin_flutter/Widgets/Stack_Widget.dart';
 import 'package:jibin_flutter/Widgets/Tab_bar_widget.dart';
 import 'package:jibin_flutter/Pickers/Timepicker.dart';
+import 'package:jibin_flutter/Widgets/URL_launcher.dart';
 import '3 Ui Page With Images/page1.dart';
 import '3 Ui Page With Images/page2.dart';
 import '3 Ui Page With Images/page3.dart';
@@ -74,29 +80,33 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        // This is the theme of your application.
-        //
-        // TRY THIS: Try running your application with "flutter run". You'll see
-        // the application has a purple toolbar. Then, without quitting the app,
-        // try changing the seedColor in the colorScheme below to Colors.green
-        // and then invoke "hot reload" (save your changes or press the "hot
-        // reload" button in a Flutter-supported IDE, or press "r" if you used
-        // the command line to start the app).
-        //
-        // Notice that the counter didn't reset back to zero; the application
-        // state is not lost during the reload. To reset the state, use hot
-        // restart instead.
-        //
-        // This works for code too, not just values: Most code changes can be
-        // tested with just a hot reload.
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
+    return ScreenUtilInit(
+      builder: (context, child) => MaterialApp(
+
+        debugShowCheckedModeBanner: false,
+        title: 'Flutter Demo',
+        theme: ThemeData(
+          // This is the theme of your application.
+          //
+          // TRY THIS: Try running your application with "flutter run". You'll see
+          // the application has a purple toolbar. Then, without quitting the app,
+          // try changing the seedColor in the colorScheme below to Colors.green
+          // and then invoke "hot reload" (save your changes or press the "hot
+          // reload" button in a Flutter-supported IDE, or press "r" if you used
+          // the command line to start the app).
+          //
+          // Notice that the counter didn't reset back to zero; the application
+          // state is not lost during the reload. To reset the state, use hot
+          // restart instead.
+          //
+          // This works for code too, not just values: Most code changes can be
+          // tested with just a hot reload.
+          colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+          useMaterial3: true,
+        ),
+        home: Biodata_field(),
       ),
-      home: Vehicle_login(),
+      designSize: Size(360, 690)
     );
   }
 }

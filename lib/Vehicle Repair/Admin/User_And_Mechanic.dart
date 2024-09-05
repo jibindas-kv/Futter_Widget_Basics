@@ -21,41 +21,57 @@ class UserAndMech_ extends StatelessWidget {
           ),
           body: Column(
             children: [
-              TabBar(
-                padding: EdgeInsets.only(left: 30, right: 30),
-                labelColor: Colors.white,
-                unselectedLabelColor: Colors.black,
-                indicatorSize: TabBarIndicatorSize.tab,
-                indicator: BoxDecoration(
-                  borderRadius: BorderRadius.circular(10),
-                  color: Colors.blue.shade400,
-                ),
-                tabs: [
-                  Tab(
-                    child: Text(
-                      'User',
-                      style: TextStyle(
-                        // color: Colors.white,
-                        fontSize: 20,
-                        fontFamily: 'Poppins',
-                        fontWeight: FontWeight.w500,
-                        height: 0,
+              Stack(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.only(left: 25,right: 25),
+                    child: Container(
+                      width: 500,
+                      height: 50,
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(10)
                       ),
+                      
                     ),
                   ),
-                  Tab(
-                    child: Text(
-                      'Mechanic',
-                      style: TextStyle(
-                        // color: Colors.white,
-                        fontSize: 20,
-                        fontFamily: 'Poppins',
-                        fontWeight: FontWeight.w500,
-                        height: 0,
+
+                  TabBar(
+                  padding: EdgeInsets.only(left: 30, right: 30),
+                  labelColor: Colors.white,
+                  unselectedLabelColor: Colors.black,
+                  indicatorSize: TabBarIndicatorSize.tab,
+                  indicator: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10),
+                    color: Colors.blue.shade400,
+                  ),
+                  tabs: [
+                    Tab(
+                      child: Text(
+                        'User',
+                        style: TextStyle(
+                          // color: Colors.white,
+                          fontSize: 20,
+                          fontFamily: 'Poppins',
+                          fontWeight: FontWeight.w500,
+                          height: 0,
+                        ),
                       ),
                     ),
-                  ),
-                ],
+                    Tab(
+                      child: Text(
+                        'Mechanic',
+                        style: TextStyle(
+                          // color: Colors.white,
+                          fontSize: 20,
+                          fontFamily: 'Poppins',
+                          fontWeight: FontWeight.w500,
+                          height: 0,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),]
               ),
               Expanded(
                 child: TabBarView(
