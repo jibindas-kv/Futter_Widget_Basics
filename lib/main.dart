@@ -33,6 +33,13 @@ import 'package:jibin_flutter/Vehicle%20Repair/Admin/User.dart';
 import 'package:jibin_flutter/Vehicle%20Repair/Admin/User_And_Mechanic.dart';
 import 'package:jibin_flutter/Vehicle%20Repair/Admin/Vehicle_Navigation.dart';
 import 'package:jibin_flutter/Vehicle%20Repair/Admin/Vehicle_login.dart';
+import 'package:jibin_flutter/Whatsapp/Whatsapp_calls.dart';
+import 'package:jibin_flutter/Whatsapp/Whatsapp_channel_explore.dart';
+import 'package:jibin_flutter/Whatsapp/Whatsapp_community.dart';
+import 'package:jibin_flutter/Whatsapp/Whatsapp_home.dart';
+import 'package:jibin_flutter/Whatsapp/Whatsapp_navigation.dart';
+import 'package:jibin_flutter/Whatsapp/Whatsapp_settings.dart';
+import 'package:jibin_flutter/Whatsapp/Whatsapp_updates.dart';
 import 'package:jibin_flutter/Widgets/Alert_dialog_box_widget.dart';
 import 'package:jibin_flutter/Widgets/Animation%20Widgets/Lottie_animation.dart';
 import 'package:jibin_flutter/Widgets/Card_Widget.dart';
@@ -104,7 +111,7 @@ class MyApp extends StatelessWidget {
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
           useMaterial3: true,
         ),
-        home: Biodata_field(),
+        home: Whatsapp_navigation(),
       ),
       designSize: Size(360, 690)
     );

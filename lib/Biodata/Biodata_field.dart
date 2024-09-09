@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:fluttertoast/fluttertoast.dart';
 import 'package:jibin_flutter/Biodata/Biodata_details.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
