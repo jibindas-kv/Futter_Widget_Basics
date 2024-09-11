@@ -1,5 +1,4 @@
 import 'dart:io';
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
@@ -14,12 +13,11 @@ class Whatsapp_updates extends StatefulWidget {
 }
 
 class _Whatsapp_updatesState extends State<Whatsapp_updates> {
-
   File? _image;
 
   Future<void> _pickImage() async {
     final pickedFile =
-    await ImagePicker().pickImage(source: ImageSource.camera);
+        await ImagePicker().pickImage(source: ImageSource.camera);
 
     if (pickedFile != null) {
       setState(() {
@@ -27,6 +25,7 @@ class _Whatsapp_updatesState extends State<Whatsapp_updates> {
       });
     }
   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -54,7 +53,8 @@ class _Whatsapp_updatesState extends State<Whatsapp_updates> {
               CupertinoIcons.search,
               color: Colors.white,
             ),
-          ),Padding(
+          ),
+          Padding(
               padding: const EdgeInsets.only(right: 5.0),
               child: PopupMenuButton<String>(
                   color: Color.fromRGBO(11, 15, 27, 1),
@@ -86,9 +86,11 @@ class _Whatsapp_updatesState extends State<Whatsapp_updates> {
                       ),
                       PopupMenuItem(
                         onTap: () {
-                          Navigator.push(context, MaterialPageRoute(builder: (context) {
-                            return Whatsapp_settings();
-                          },));
+                          Navigator.push(context, MaterialPageRoute(
+                            builder: (context) {
+                              return Whatsapp_settings();
+                            },
+                          ));
                         },
                         child: Text(
                           "Settings",
@@ -107,109 +109,115 @@ class _Whatsapp_updatesState extends State<Whatsapp_updates> {
       backgroundColor: Color.fromRGBO(11, 20, 27, 1),
       body: Column(
         children: [
-          Row(
-            children: [
-              SizedBox(
-                width: 20,
-              ),
-              Text(
-                "Status",
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 23,
-                  fontWeight: FontWeight.bold,
-                ),
-              )
-            ],
-          ),
-          Padding(
-            padding: const EdgeInsets.only(left: 10, top: 8),
-            child: Column(
-              children: [
-                SizedBox(
-                  height: 120,
-                  child: ListView.builder(
-                    scrollDirection: Axis.horizontal,
-                    itemBuilder: (context, index) {
-                      return Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Column(
-                          children: [
-                            CircleAvatar(
-                              backgroundImage:
-                                  AssetImage("assets/whatsapp_dp.jpg"),
-                              radius: 35,
-                            ),
-                            SizedBox(
-                              height: 5,
-                            ),
-                            Text(
-                              "Name",
-                              style: TextStyle(
-                                  color: Colors.white,
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 15),
-                            )
-                          ],
-                        ),
-                      );
-                    },
-                  ),
-                ),
-              ],
-            ),
-          ),
-          Row(
-            children: [
-              SizedBox(
-                width: 20,
-              ),
-              Text(
-                "Channels",
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 22,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-              SizedBox(
-                width: 205,
-              ),
-              InkWell(
-                onTap: () {
-                  Navigator.push(context, MaterialPageRoute(builder: (context) {
-                    return Whatsapp_channel_explore();
-                  },));
-                },
-                child: Text(
-                  "Explore",
-                  style: TextStyle(
-                    color: Colors.green,
-                    fontSize: 17,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-              ),
-              SizedBox(
-                width: 5,
-              ),
-              Padding(
-                padding: const EdgeInsets.only(top: 3),
-                child: Icon(
-                  Icons.arrow_forward_ios,
-                  color: Colors.green,
-                  size: 15,
-                ),
-              )
-            ],
-          ),
-          SizedBox(
-            height: 10,
-          ),
           Expanded(
               child: ListView.builder(
             itemCount: 20,
             itemBuilder: (context, index) {
+              if (index == 0) {
+                return Column(children: [
+                  Row(
+                    children: [
+                      SizedBox(
+                        width: 20,
+                      ),
+                      Text(
+                        "Status",
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 23,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      )
+                    ],
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(left: 10, top: 8),
+                    child: Column(
+                      children: [
+                        SizedBox(
+                          height: 120,
+                          child: ListView.builder(
+                            scrollDirection: Axis.horizontal,
+                            itemBuilder: (context, index) {
+                              return Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Column(
+                                  children: [
+                                    CircleAvatar(
+                                      backgroundImage:
+                                          AssetImage("assets/whatsapp_dp.jpg"),
+                                      radius: 35,
+                                    ),
+                                    SizedBox(
+                                      height: 5,
+                                    ),
+                                    Text(
+                                      "Name",
+                                      style: TextStyle(
+                                          color: Colors.white,
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 15),
+                                    )
+                                  ],
+                                ),
+                              );
+                            },
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  Row(
+                    children: [
+                      SizedBox(
+                        width: 20,
+                      ),
+                      Text(
+                        "Channels",
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 22,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                      SizedBox(
+                        width: 205,
+                      ),
+                      InkWell(
+                        onTap: () {
+                          Navigator.push(context, MaterialPageRoute(
+                            builder: (context) {
+                              return Whatsapp_channel_explore();
+                            },
+                          ));
+                        },
+                        child: Text(
+                          "Explore",
+                          style: TextStyle(
+                            color: Colors.green,
+                            fontSize: 17,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ),
+                      SizedBox(
+                        width: 5,
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(top: 3),
+                        child: Icon(
+                          Icons.arrow_forward_ios,
+                          color: Colors.green,
+                          size: 15,
+                        ),
+                      )
+                    ],
+                  ),
+                  SizedBox(
+                    height: 10,
+                  ),
+                ]);
+              }
               return Padding(
                 padding: const EdgeInsets.only(left: 10, top: 0, right: 10),
                 child: ListTile(

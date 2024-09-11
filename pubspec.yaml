@@ -52,6 +52,7 @@ dependencies:
   toast: ^0.3.0
   toastification: ^2.2.0
   fluttertoast: ^8.0.7
+  geolocator: ^13.0.1
 
 dev_dependencies:
   flutter_test:

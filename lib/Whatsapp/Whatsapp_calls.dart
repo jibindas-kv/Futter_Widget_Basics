@@ -13,12 +13,11 @@ class Whatsapp_calls extends StatefulWidget {
 }
 
 class _Whatsapp_callsState extends State<Whatsapp_calls> {
-
   File? _image;
 
   Future<void> _pickImage() async {
     final pickedFile =
-    await ImagePicker().pickImage(source: ImageSource.camera);
+        await ImagePicker().pickImage(source: ImageSource.camera);
 
     if (pickedFile != null) {
       setState(() {
@@ -26,6 +25,7 @@ class _Whatsapp_callsState extends State<Whatsapp_calls> {
       });
     }
   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -76,9 +76,11 @@ class _Whatsapp_callsState extends State<Whatsapp_calls> {
                       ),
                       PopupMenuItem(
                         onTap: () {
-                          Navigator.push(context, MaterialPageRoute(builder: (context) {
-                            return Whatsapp_settings();
-                          },));
+                          Navigator.push(context, MaterialPageRoute(
+                            builder: (context) {
+                              return Whatsapp_settings();
+                            },
+                          ));
                         },
                         child: Text(
                           "Settings",
@@ -97,80 +99,84 @@ class _Whatsapp_callsState extends State<Whatsapp_calls> {
       backgroundColor: Color.fromRGBO(11, 20, 27, 1),
       body: Column(
         children: [
-          Row(
-            children: [
-              SizedBox(
-                width: 20,
-              ),
-              Text(
-                "Favourites",
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 20,
-                  fontWeight: FontWeight.bold,
-                ),
-              )
-            ],
-          ),
-          Padding(
-            padding: const EdgeInsets.only(left: 10, top: 15),
-            child: Row(
-              children: [
-                SizedBox(
-                  width: 10,
-                ),
-                Container(
-                  height: 40,
-                  width: 40,
-                  decoration: BoxDecoration(
-                      color: Colors.green.shade700,
-                      borderRadius: BorderRadius.circular(100)),
-                  child: Center(
-                      child: Icon(
-                    CupertinoIcons.heart_fill,
-                    color: Colors.black,
-                    size: 25,
-                  )),
-                ),
-                SizedBox(
-                  width: 25,
-                ),
-                Text(
-                  "Add favourite",
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 17,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-              ],
-            ),
-          ),
-          SizedBox(
-            height: 15,
-          ),
-          Row(
-            children: [
-              SizedBox(
-                width: 20,
-              ),
-              Text(
-                "Recent",
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 20,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-            ],
-          ),
-          SizedBox(
-            height: 10,
-          ),
           Expanded(
               child: ListView.builder(
             itemCount: 20,
             itemBuilder: (context, index) {
+              if (index == 0) {
+                return Column(children: [
+                  Row(
+                    children: [
+                      SizedBox(
+                        width: 20,
+                      ),
+                      Text(
+                        "Favourites",
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      )
+                    ],
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(left: 10, top: 15),
+                    child: Row(
+                      children: [
+                        SizedBox(
+                          width: 10,
+                        ),
+                        Container(
+                          height: 40,
+                          width: 40,
+                          decoration: BoxDecoration(
+                              color: Colors.green.shade700,
+                              borderRadius: BorderRadius.circular(100)),
+                          child: Center(
+                              child: Icon(
+                            CupertinoIcons.heart_fill,
+                            color: Colors.black,
+                            size: 25,
+                          )),
+                        ),
+                        SizedBox(
+                          width: 25,
+                        ),
+                        Text(
+                          "Add favourite",
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 17,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  SizedBox(
+                    height: 15,
+                  ),
+                  Row(
+                    children: [
+                      SizedBox(
+                        width: 20,
+                      ),
+                      Text(
+                        "Recent",
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ],
+                  ),
+                  SizedBox(
+                    height: 10,
+                  )
+                ]);
+              }
               return Padding(
                 padding: const EdgeInsets.only(left: 10, top: 0, right: 10),
                 child: Padding(

@@ -130,131 +130,135 @@ class _Whatsapp_homeState extends State<Whatsapp_home> {
         backgroundColor: Color.fromRGBO(11, 20, 27, 1),
       ),
       backgroundColor: Color.fromRGBO(11, 20, 27, 1),
-      body: Column(
-        children: [
-          Padding(
-            padding: const EdgeInsets.only(left: 20, right: 20, top: 10),
-            child: Container(
-              height: 50,
-              child: TextFormField(
-                decoration: InputDecoration(
-                    hintText: '  Ask Meta AI or Search',
-                    hintStyle:
+      body:  ListView.builder(
+        itemCount: 20,
+        itemBuilder: (context, index) {
+          if(index==0){return   Column(
+            children: [
+              Padding(
+                padding: const EdgeInsets.only(left: 20, right: 20, top: 10),
+                child: Container(
+                  height: 50,
+                  child: TextFormField(
+                    decoration: InputDecoration(
+                        hintText: '  Ask Meta AI or Search',
+                        hintStyle:
                         TextStyle(color: Color.fromRGBO(138, 135, 145, 1)),
-                    prefixIcon: Container(
-                      height: 10,
-                      width: 10,
-                      child: Padding(
-                        padding: const EdgeInsets.only(left: 15),
-                        child: Image(
-                          image: AssetImage("assets/Meta_ai.png"),
-                          fit: BoxFit.cover,
+                        prefixIcon: Container(
+                          height: 10,
+                          width: 10,
+                          child: Padding(
+                            padding: const EdgeInsets.only(left: 15),
+                            child: Image(
+                              image: AssetImage("assets/Meta_ai.png"),
+                              fit: BoxFit.cover,
+                            ),
+                          ),
                         ),
-                      ),
+                        // fillColor: Color.fromARGB(36, 43, 49, 1),
+                        fillColor: Colors.grey.shade900,
+                        filled: true,
+                        border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(30),
+                            borderSide: BorderSide.none)),
+                  ),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(left: 15, right: 10, top: 20),
+                child: Row(
+                  children: [
+                    SizedBox(
+                      width: 10,
                     ),
-                    // fillColor: Color.fromARGB(36, 43, 49, 1),
-                    fillColor: Colors.grey.shade900,
-                    filled: true,
-                    border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(30),
-                        borderSide: BorderSide.none)),
+                    Container(
+                      height: 35,
+                      width: 50,
+                      decoration: BoxDecoration(
+                          color: Colors.green.shade700,
+                          borderRadius: BorderRadius.circular(30)),
+                      child: Center(
+                          child: Text('All',
+                              style: TextStyle(color: Colors.green.shade50))),
+                    ),
+                    SizedBox(
+                      width: 10,
+                    ),
+                    Container(
+                      height: 35,
+                      width: 70,
+                      decoration: BoxDecoration(
+                          color: Colors.grey.shade900,
+                          borderRadius: BorderRadius.circular(30)),
+                      child: Center(
+                          child: Text(
+                            'Unread',
+                            style: TextStyle(color: Colors.grey.shade200),
+                          )),
+                    ),
+                    SizedBox(
+                      width: 10,
+                    ),
+                    Container(
+                      height: 35,
+                      width: 90,
+                      decoration: BoxDecoration(
+                          color: Colors.grey.shade900,
+                          borderRadius: BorderRadius.circular(30)),
+                      child: Center(
+                          child: Text(
+                            'Favourites',
+                            style: TextStyle(color: Colors.grey.shade200),
+                          )),
+                    ),
+                    SizedBox(
+                      width: 10,
+                    ),
+                    Container(
+                      height: 35,
+                      width: 70,
+                      decoration: BoxDecoration(
+                          color: Colors.grey.shade900,
+                          borderRadius: BorderRadius.circular(30)),
+                      child: Center(
+                          child: Text(
+                            'Groups',
+                            style: TextStyle(color: Colors.grey.shade200),
+                          )),
+                    ),
+                  ],
+                ),
+              ),
+              SizedBox(
+                height: 10,
+              ),
+            ],
+          );}
+          return Padding(
+            padding: const EdgeInsets.only(left: 10, top: 0, right: 10),
+            child: ListTile(
+              title: Text(
+                "Name",
+                style: TextStyle(
+                    color: Colors.white, fontWeight: FontWeight.bold),
+              ),
+              subtitle: Text(
+                "Last Message",
+                style: TextStyle(color: Colors.grey),
+              ),
+              leading: CircleAvatar(
+                backgroundImage: AssetImage("assets/whatsapp_dp.jpg"),
+                radius: 30,
               ),
             ),
-          ),
-          Padding(
-            padding: const EdgeInsets.only(left: 15, right: 10, top: 20),
-            child: Row(
-              children: [
-                SizedBox(
-                  width: 10,
-                ),
-                Container(
-                  height: 35,
-                  width: 50,
-                  decoration: BoxDecoration(
-                      color: Colors.green.shade700,
-                      borderRadius: BorderRadius.circular(30)),
-                  child: Center(
-                      child: Text('All',
-                          style: TextStyle(color: Colors.green.shade50))),
-                ),
-                SizedBox(
-                  width: 10,
-                ),
-                Container(
-                  height: 35,
-                  width: 70,
-                  decoration: BoxDecoration(
-                      color: Colors.grey.shade900,
-                      borderRadius: BorderRadius.circular(30)),
-                  child: Center(
-                      child: Text(
-                    'Unread',
-                    style: TextStyle(color: Colors.grey.shade200),
-                  )),
-                ),
-                SizedBox(
-                  width: 10,
-                ),
-                Container(
-                  height: 35,
-                  width: 90,
-                  decoration: BoxDecoration(
-                      color: Colors.grey.shade900,
-                      borderRadius: BorderRadius.circular(30)),
-                  child: Center(
-                      child: Text(
-                    'Favourites',
-                    style: TextStyle(color: Colors.grey.shade200),
-                  )),
-                ),
-                SizedBox(
-                  width: 10,
-                ),
-                Container(
-                  height: 35,
-                  width: 70,
-                  decoration: BoxDecoration(
-                      color: Colors.grey.shade900,
-                      borderRadius: BorderRadius.circular(30)),
-                  child: Center(
-                      child: Text(
-                    'Groups',
-                    style: TextStyle(color: Colors.grey.shade200),
-                  )),
-                ),
-              ],
-            ),
-          ),
-          SizedBox(
-            height: 10,
-          ),
-          Expanded(
-              child: ListView.builder(
-            itemCount: 20,
-            itemBuilder: (context, index) {
-              return Padding(
-                padding: const EdgeInsets.only(left: 10, top: 0, right: 10),
-                child: ListTile(
-                  title: Text(
-                    "Name",
-                    style: TextStyle(
-                        color: Colors.white, fontWeight: FontWeight.bold),
-                  ),
-                  subtitle: Text(
-                    "Last Message",
-                    style: TextStyle(color: Colors.grey),
-                  ),
-                  leading: CircleAvatar(
-                    backgroundImage: AssetImage("assets/whatsapp_dp.jpg"),
-                    radius: 30,
-                  ),
-                ),
-              );
-            },
-          ))
-        ],
-      ),
+          );
+        },
+      )
+
+
+
+
+
     );
   }
 }

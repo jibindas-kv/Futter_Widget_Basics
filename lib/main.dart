@@ -18,6 +18,7 @@ import 'package:jibin_flutter/Navigation%20Task/nav_1.dart';
 import 'package:jibin_flutter/Navigation%20Task/nav_2.dart';
 import 'package:jibin_flutter/Pickers/Date_picker.dart';
 import 'package:jibin_flutter/Pickers/Image_picker.dart';
+import 'package:jibin_flutter/Pickers/Map_picker.dart';
 import 'package:jibin_flutter/Shared%20Preference/1st%20Page.dart';
 import 'package:jibin_flutter/Shared%20Preference/2nd%20Page.dart';
 import 'package:jibin_flutter/Stack%20Widget%20Task/Stack_page_1.dart';
