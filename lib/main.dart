@@ -14,6 +14,8 @@ import 'package:jibin_flutter/Fruit%20Buy%20Ui/Banana.dart';
 import 'package:jibin_flutter/Fruit%20Buy%20Ui/Drinks.dart';
 import 'package:jibin_flutter/Fruit%20Buy%20Ui/Fruit_home.dart';
 import 'package:jibin_flutter/Fruit%20Buy%20Ui/Fruit_navigation.dart';
+import 'package:jibin_flutter/Fruits/Fruit_tabbar.dart';
+import 'package:jibin_flutter/Fruits/Fruit_page2.dart';
 import 'package:jibin_flutter/Navigation%20Task/nav_1.dart';
 import 'package:jibin_flutter/Navigation%20Task/nav_2.dart';
 import 'package:jibin_flutter/Pickers/Date_picker.dart';
@@ -46,6 +48,7 @@ import 'package:jibin_flutter/Widgets/Animation%20Widgets/Lottie_animation.dart'
 import 'package:jibin_flutter/Widgets/Card_Widget.dart';
 import 'package:jibin_flutter/Widgets/Check_box_widget.dart';
 import 'package:jibin_flutter/Widgets/Drawer_widget.dart';
+import 'package:jibin_flutter/Widgets/Grid_widget.dart';
 import 'package:jibin_flutter/Widgets/List_view_builder_widget.dart';
 import 'package:jibin_flutter/Widgets/List_view_separter_widget.dart';
 import 'package:jibin_flutter/Tasks/task_3.dart';
@@ -112,7 +115,7 @@ class MyApp extends StatelessWidget {
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
           useMaterial3: true,
         ),
-        home: Whatsapp_navigation(),
+        home: Fruit_tabbar(),
       ),
       designSize: Size(360, 690)
     );
