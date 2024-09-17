@@ -21,6 +21,8 @@ import 'package:jibin_flutter/Navigation%20Task/nav_2.dart';
 import 'package:jibin_flutter/Pickers/Date_picker.dart';
 import 'package:jibin_flutter/Pickers/Image_picker.dart';
 import 'package:jibin_flutter/Pickers/Map_picker.dart';
+import 'package:jibin_flutter/Provider/Page_1.dart';
+import 'package:jibin_flutter/Provider/Provider_demo.dart';
 import 'package:jibin_flutter/Shared%20Preference/1st%20Page.dart';
 import 'package:jibin_flutter/Shared%20Preference/2nd%20Page.dart';
 import 'package:jibin_flutter/Stack%20Widget%20Task/Stack_page_1.dart';
@@ -59,6 +61,7 @@ import 'package:jibin_flutter/Widgets/Stack_Widget.dart';
 import 'package:jibin_flutter/Widgets/Tab_bar_widget.dart';
 import 'package:jibin_flutter/Pickers/Timepicker.dart';
 import 'package:jibin_flutter/Widgets/URL_launcher.dart';
+import 'package:provider/provider.dart';
 import '3 Ui Page With Images/page1.dart';
 import '3 Ui Page With Images/page2.dart';
 import '3 Ui Page With Images/page3.dart';
@@ -84,7 +87,6 @@ import 'Widgets/Toggle_Button_Widget.dart';
 void main() {
   runApp(const MyApp());
 }
-
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
@@ -92,30 +94,17 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ScreenUtilInit(
-      builder: (context, child) => MaterialApp(
-
-        debugShowCheckedModeBanner: false,
-        title: 'Flutter Demo',
-        theme: ThemeData(
-          // This is the theme of your application.
-          //
-          // TRY THIS: Try running your application with "flutter run". You'll see
-          // the application has a purple toolbar. Then, without quitting the app,
-          // try changing the seedColor in the colorScheme below to Colors.green
-          // and then invoke "hot reload" (save your changes or press the "hot
-          // reload" button in a Flutter-supported IDE, or press "r" if you used
-          // the command line to start the app).
-          //
-          // Notice that the counter didn't reset back to zero; the application
-          // state is not lost during the reload. To reset the state, use hot
-          // restart instead.
-          //
-          // This works for code too, not just values: Most code changes can be
-          // tested with just a hot reload.
-          colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-          useMaterial3: true,
+      builder: (context, child) => ChangeNotifierProvider(
+        create: (context) => Provider_demo(),
+        child: MaterialApp(
+          debugShowCheckedModeBanner: false,
+          title: 'Flutter Demo',
+          theme: ThemeData(
+            colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+            useMaterial3: true,
+          ),
+          home: Page_1(),
         ),
-        home: Fruit_tabbar(),
       ),
       designSize: Size(360, 690)
     );

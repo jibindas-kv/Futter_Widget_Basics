@@ -53,6 +53,9 @@ dependencies:
   toastification: ^2.2.0
   fluttertoast: ^8.0.7
   geolocator: ^13.0.1
+  provider: ^6.1.2
+  flat_3d_button: ^1.0.3
+  flat_card_button: ^0.0.1
 
 dev_dependencies:
   flutter_test:

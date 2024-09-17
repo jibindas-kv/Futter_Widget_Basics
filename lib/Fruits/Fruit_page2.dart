@@ -9,7 +9,14 @@ class Fruit_page2 extends StatefulWidget {
 }
 
 class _Fruit_page2State extends State<Fruit_page2> {
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    _price();
+  }
+
   int _counter = 0;
+  var _value=2.15;
   void _incrementCounter() {
     setState(() {
       _counter = _counter + 50;
@@ -19,6 +26,14 @@ class _Fruit_page2State extends State<Fruit_page2> {
   void _decrementCounter() {
     setState(() {
       if (_counter >= 1) _counter = _counter - 50;
+    });
+  }
+
+  void _price(){
+    setState(() {
+      if(_counter>=50){
+        _value=_value+2.15;
+      }
     });
   }
 
@@ -155,7 +170,7 @@ class _Fruit_page2State extends State<Fruit_page2> {
                           weight: 10,
                         ),
                         Text(
-                          "2.15",
+                          "$_value 2.15",
                           style: TextStyle(
                               fontWeight: FontWeight.w900, fontSize: 30),
                         ),

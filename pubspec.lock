@@ -169,6 +169,22 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.1.0"
+  flat_3d_button:
+    dependency: "direct main"
+    description:
+      name: flat_3d_button
+      sha256: "749d02ba577581b919158922aa2f39c677ba3657f22a35f952612e5688880c49"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.0.3"
+  flat_card_button:
+    dependency: "direct main"
+    description:
+      name: flat_card_button
+      sha256: "865cd9a2a6213dc636778a6e512da1993663e42c71ad7f095ba7b8519407f5c2"
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.0.1"
   flutter:
     dependency: "direct main"
     description: flutter
@@ -456,6 +472,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.0.5"
+  nested:
+    dependency: transitive
+    description:
+      name: nested
+      sha256: "03bac4c528c64c95c722ec99280375a6f2fc708eec17c7b3f07253b626cd2a20"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.0.0"
   path:
     dependency: transitive
     description:
@@ -520,6 +544,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.1.8"
+  provider:
+    dependency: "direct main"
+    description:
+      name: provider
+      sha256: c8a055ee5ce3fd98d6fc872478b03823ffdb448699c6ebdbbc71d59b596fd48c
+      url: "https://pub.dev"
+    source: hosted
+    version: "6.1.2"
   shared_preferences:
     dependency: "direct main"
     description:
