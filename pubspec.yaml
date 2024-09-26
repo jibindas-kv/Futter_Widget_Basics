@@ -56,6 +56,7 @@ dependencies:
   provider: ^6.1.2
   flat_3d_button: ^1.0.3
   flat_card_button: ^0.0.1
+  http: ^1.2.2
 
 dev_dependencies:
   flutter_test:
